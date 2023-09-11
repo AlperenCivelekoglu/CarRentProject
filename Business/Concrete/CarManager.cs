@@ -20,13 +20,12 @@ namespace Business.Concrete
         {
             _carDal = carDal;
         }
-
         public IResult AddCar(Car car)
         {
             if(car.Description.Length >= 2 || car.DailyPrice > 0)
             {
                 _carDal.Add(car);
-                return new SuccessResult(Messages.CarAdded);
+                return new SuccessResult(Messages.UserUpdated);
             }
             else if(car.Description.Length < 2)
             {
@@ -36,6 +35,16 @@ namespace Business.Concrete
             {
                 return new ErrorResult(Messages.PriceZero);
             }
+        }
+        public IResult DeleteCar(Car car)
+        {
+            _carDal.Delete(car);
+            return new SuccessResult(Messages.CarDeleted);
+        }
+        public IResult UpdateCar(Car car)
+        {
+            _carDal.Update(car);
+            return new SuccessResult(Messages.CarUpdated);
         }
 
         public IDataResult<List<Car>> GetAll()
