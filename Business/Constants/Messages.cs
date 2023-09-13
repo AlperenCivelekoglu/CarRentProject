@@ -25,6 +25,12 @@ namespace Business.Constants
         public static readonly string UserAdded = "User Successfully added";
         public static readonly string UserUpdated = "User Successfully updated";
         public static readonly string UserDeleted = "User Successfully deleted";
-
+        internal static readonly string ColorAdded;
+        internal static readonly string ColorDeleted;
+        internal static readonly string ColorShowed;
+        internal static readonly string ColorUpdated;
+        internal static readonly string CustomerAdded;
+        internal static readonly string CustomerDeleted;
+        internal static readonly string CustomerUpdated;
     }
 }

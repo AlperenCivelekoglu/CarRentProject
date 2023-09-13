@@ -21,13 +21,13 @@ namespace Business.Concrete
         {
             _rentalDal = rentalDal;
         }
-        public IResult Add(Rental rental)
+        public IResult AddRental(Rental rental)
         {
             _rentalDal.Add(rental);
             return new SuccessResult(Messages.RentalAdded);
         }
 
-        public IResult Delete(Rental rental)
+        public IResult DeleteRental(Rental rental)
         {
             _rentalDal.Delete(rental);
             return new SuccessResult(Messages.RentalDeleted);
@@ -38,7 +38,12 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
         }
 
-        public IResult Update(Rental rental)
+        public IDataResult<Rental> GetById(int id)
+        {
+            return new SuccessDataResult<Rental>(_rentalDal.GetById(id));
+        }
+
+        public IResult UpdateRental(Rental rental)
         {
             _rentalDal.Update(rental);
             return new SuccessResult(Messages.RentalUpdated);
