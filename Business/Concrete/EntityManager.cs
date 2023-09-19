@@ -5,7 +5,7 @@ using Core.Utilities.Abstract;
 using Core.Utilities.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
-using Entities.Abstract;
+//using Entities.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;

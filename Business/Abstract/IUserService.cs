@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Entities.Concrete;
 
 namespace Business.Abstract
 {
@@ -16,5 +17,7 @@ namespace Business.Abstract
         IResult UpdateUser(User user);
         IDataResult<List<User>> GetAll();
         IDataResult<User> GetById(int id);
+        List<OperationClaim> GetClaims(User user);
+        User GetByMail(string email);
     }
 }

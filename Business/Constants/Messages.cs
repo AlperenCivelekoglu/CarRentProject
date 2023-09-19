@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace Business.Constants
         public static readonly string UserAdded = "User Successfully added";
         public static readonly string UserUpdated = "User Successfully updated";
         public static readonly string UserDeleted = "User Successfully deleted";
+        public static readonly string CarImageAddedSuccessfully;
         internal static readonly string ColorAdded;
         internal static readonly string ColorDeleted;
         internal static readonly string ColorShowed;
@@ -32,5 +34,15 @@ namespace Business.Constants
         internal static readonly string CustomerAdded;
         internal static readonly string CustomerDeleted;
         internal static readonly string CustomerUpdated;
+        internal static readonly string CarImageAdded;
+        internal static readonly string CarImageDeleted;
+        internal static readonly string CarImageUpdated;
+        internal static readonly string AccesTokenCreated;
+        internal static readonly string UserAlreadyExists;
+        internal static readonly string UserRegisteredSuccesfully;
+        internal static readonly User UserNotFound;
+        internal static readonly User PasswordWrongError;
+        internal static readonly string SuccesfulLogin;
+        internal static readonly string? AuthorizationDenied;
     }
 }
